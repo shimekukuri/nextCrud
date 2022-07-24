@@ -1,19 +1,19 @@
 let express = require("express");
-let bodyParser = require("bodyParser");
+let bodyParser = require("body-parser");
 const { response } = require("express");
 
-const app = Express();
+const app = express();
 const port = 3200;
 
 app.use(bodyParser.json());
 app.use(
-  bodyParser.urlenconded({
+  bodyParser.urlencoded({
     extended: true,
   })
 );
 
-app.get(`/`, (request, reponse) => {
-  response.json({ info: `Node.js, epxress, and postgresql API` });
+app.get(`/`, (request, response) => {
+  return response.json({ info: `Node.js, epxress, and postgresql API` });
 });
 
 app.listen(port, () => {
