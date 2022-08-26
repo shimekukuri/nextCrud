@@ -1,4 +1,4 @@
-const Pool = require('pg').Pool
+const Pool = require("pg").Pool;
 
 const pool = new Pool({
   user: "me",
@@ -71,9 +71,9 @@ const deleteUser = (request, response) => {
 };
 
 module.exports = {
-    getUsers,
-    getUsersById,
-    createUser,
-    updateUser,
-    deleteUser
+  getUsers,
+  getUsersById,
+  createUser,
+  updateUser,
+  deleteUser,
 };
